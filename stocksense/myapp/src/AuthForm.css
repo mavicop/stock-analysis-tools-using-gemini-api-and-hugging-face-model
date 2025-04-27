@@ -1,0 +1,114 @@
+/* AuthForm.css */
+.auth-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 25px;
+    background: #1a1b23; /* Darker background shade */
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-form:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.auth-form h2 {
+    margin-bottom: 20px;
+    color: #e0e0e0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.auth-form .error {
+    color: #f5a623;
+    background: #3c2a25;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Input Styling */
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #444;
+    border-radius: 6px;
+    font-size: 16px;
+    background: #2a2c35;
+    color: #f0f0f0;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.auth-form input:focus {
+    border-color: #1e1c42;
+    outline: none;
+    box-shadow: 0 0 8px rgba(19, 13, 83, 0.6);
+}
+
+/* Button Styling */
+.auth-form button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #1f1e43, #1f2b3c); /* Gradient effect */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.auth-form button:hover {
+    background: linear-gradient(135deg, #14142f, #1d153a);
+    transform: scale(1.06);
+    box-shadow: 0 5px 10px rgba(8, 9, 11, 0.4);
+}
+
+/* Text and Link Styling */
+.auth-form p {
+    margin-top: 15px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.auth-form a {
+    color: #74757a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.auth-form a:hover {
+    text-decoration: underline;
+    color: #155a8a;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .auth-form {
+        margin: 30px auto;
+        padding: 20px;
+    }
+    
+    .auth-form h2 {
+        font-size: 20px;
+    }
+
+    .auth-form input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .auth-form button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

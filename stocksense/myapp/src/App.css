@@ -1,0 +1,745 @@
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(90deg, rgb(20, 21, 33) 0%, rgb(21, 22, 33) 35%);;  /* Darker background */
+  color: #f1f1f1; /* Light text for contrast */
+}
+
+.app {
+  text-align: center;
+}
+
+.header {
+  background-color: #1c2f1b;/* Dark background */
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding and borders in width */
+  padding: 0; /* Remove padding */
+  margin: 0;
+  position: fixed; /* Keep the navbar fixed at the top */
+  top: 0;
+  left: 0;
+  z-index: 100; /* Ensure it's above other elements */
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%; /* Full width */
+  display: flex;
+  justify-content: space-between; /* Space out the links */
+  padding: 0.5rem 2rem; /* Adjust spacing */
+  background: linear-gradient(90deg, rgb(20, 21, 33) 0%, rgb(21, 22, 33) 35%); /* Match header background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* Add spacing between links */
+}
+
+
+.main {
+  padding: 2rem;
+ background: linear-gradient(90deg, rgb(20, 21, 33) 0%, rgb(21, 22, 33) 35%); /* Deep black-gray for main content */
+  min-height: 70vh;
+}
+
+/* Main Title (h1) */
+.main h1 {
+  font-size: 3rem; /* Larger size for prominence */
+  font-weight: 700; /* Bold for emphasis */
+  margin-bottom: 1.5rem;
+  font-family: 'Poppins', Arial, sans-serif; /* Clean and modern font */
+  color: #ffffff; /* Bright white text for contrast */
+  letter-spacing: 1px; /* Subtle spacing for a premium feel */
+  text-transform: capitalize; /* Capitalize each word for a sleek look */
+  line-height: 1.2; /* Compact line-height for cleaner spacing */
+}
+
+/* Subtitle (h4) */
+.main h4 {
+  font-size: 1.5rem; /* Slightly smaller for differentiation */
+  font-weight: 400; /* Regular weight for a softer contrast */
+  font-style: e;
+  font-family: 'Roboto', Arial, sans-serif; /* Professional sans-serif font */
+  color: #d1d1d1; /* Softer gray tone to complement the title */
+  line-height: 1.6; /* Good readability for longer text */
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px; /* Minimal spacing for a polished feel */
+  text-align: center; /* Center alignment for symmetry */
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0; /* Increase margin for more space */
+  gap: 1rem; /* Increase gap between input and button */
+}
+
+.search-bar input {
+  padding: 1rem 1.5rem; /* Increase padding for a larger input field */
+  width: 450px; /* Increased width for a more spacious look */
+  border: 2px solid #292945; 
+  border-radius: 10px; /* Slightly larger border radius */
+  background-color: #1c1b2f;
+  color: #f1f1f1;
+  font-size: 1.2rem; /* Larger font size for better readability */
+  font-family: 'Poppins', Arial, sans-serif;
+  outline: none;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1); /* Increase shadow for more depth */
+  transition: all 0.3s ease;
+}
+
+.search-bar input::placeholder {
+  color: #787a91;
+}
+
+.search-bar input:focus {
+  border-color: #11002c;
+  box-shadow: 0 0 10px rgba(86, 132, 218, 0.5); 
+}
+
+.search-bar button {
+  padding: 1rem 2rem; /* Increased padding for a more balanced look */
+  background-color: #1c1b2f;
+  border: 2px solid #292945;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 1.2rem; /* Increase font size for the button */
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #222834;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Increase shadow for emphasis */
+}
+
+.search-bar button:active {
+  transform: scale(0.96); 
+}
+
+
+
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  color: #e0e0e0; /* Neutral gray for text */
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.dropdown-btn:hover {
+  color: #ffffff; /* Coral red hover */
+}
+
+/* Styling the paragraph for better readability and visual appeal */
+
+/* Style for the stock result text container */
+.stock-result {
+  background: linear-gradient(145deg, #1a1a26, #131424); /* Same gradient style as the search bar */
+  color: #e5e5e5; /* Light text color for readability */
+  padding: 20px 30px; /* Adequate padding for readability (reduce horizontal padding if necessary) */
+  border-radius: 12px; /* Rounded corners for smooth look */
+  max-width: 1550px; /* Slightly larger max-width */
+  margin: 40px auto; /* Centered text with margin */
+  line-height: 1.7; /* Comfortable line height */
+  font-size: 1.1rem; /* Slightly larger font size */
+  font-weight: 400;
+  text-align: justify; /* Justified text for a neat appearance */
+  overflow: hidden; /* Prevent text overflow */
+  position: relative;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  white-space: normal; /* Allow text to wrap properly */
+}
+
+/* Center the stock result text */
+.stock-result {
+  text-align: justify; /* Use justify for wrapping text */
+  margin: 40px auto;
+}
+
+
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+.loading-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+/* Brand text styling */
+.brand {
+  font-weight: bold;
+  font-size: 20px;
+  color: #dcdcdc; /* Change this to your desired color, e.g., blue */
+  margin-right: 15px;
+}
+
+/* Profile section styling */
+
+
+
+/* Footer styling */
+
+.navbar a {
+  color: #e0e0e0; /* Light text */
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffffff; /* White text on hover */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Position below the button */
+  left: 0;
+  width: 240px; /* Wider for better usability */
+  background-color: #1f1f2b; /* Darker background for contrast */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  opacity: 0; /* Initially hidden */
+  pointer-events: none; /* Disable interaction while hidden */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(-10px); /* Start above for animation */
+}
+
+/* Display Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+  opacity: 1; /* Make visible */
+  pointer-events: auto; /* Enable interaction */
+  transform: translateY(0); /* Slide into place */
+}
+
+.dropdown-menu a {
+  padding: 12px 16px;
+  color: #f1f1f1;
+  font-size: 1.2rem;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #292945;
+  color: #ffffff;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.dropdown-menu .divider {
+  height: 1px;
+  background-color: #444455;
+  margin: 8px 0;
+}
+/* Container for predefined tickers */
+/* Container for predefined tickers */
+.predefined-tickers {
+  margin-top: 1rem; /* Add spacing from the search bar */
+  text-align: center;
+  width: 100%; /* Ensure it takes up the full width of the parent container */
+  max-width: 100%; /* Prevent overflow */
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+/* Flex container for the ticker buttons */
+.ticker-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the tickers horizontally */
+  gap: 0.5rem; /* Spacing between the buttons */
+  max-width: 50%; /* Ensure it's not wider than the parent container */
+  width: 100%; /* Full width to align with the parent container */
+  box-sizing: border-box;
+  margin: 0 auto; /* Center the ticker list */
+  padding: 0 1rem; /* Optional padding to fit inside the container */
+}
+
+/* Style for each ticker button */
+.ticker-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #1d213d;
+  color: #ffffffaa;
+  border: 1px solid #161922;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap; /* Prevent text from wrapping inside the button */
+}
+
+/* Hover effect for ticker buttons */
+.ticker-button:hover {
+  background-color: #20273a;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+/* Animation for word-by-word appearance */
+
+.footer {
+  background-color: #1a1a2e; /* Dark background */
+  color: #e4e4e4;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-branding h3 {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 5px 0;
+}
+
+.footer-links ul li a {
+  color: #8a8aa2;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #ffffff;
+}
+
+.footer-contact a {
+  color: #8a8aa2;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-contact a:hover {
+  color: #ffffff;
+}
+
+.social-icons {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+}
+
+.social-icons li {
+  display: inline-block;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  color: #31467e;
+}
+
+.footer-newsletter form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer-newsletter input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #2e2e50;
+  background-color: #1a1a2e;
+  color: #ffffff;
+  outline: none;
+}
+
+.footer-newsletter input::placeholder {
+  color: #8a8aa2;
+}
+
+.footer-newsletter button {
+  padding: 10px 20px;
+  background-color: #26284d;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer-newsletter button:hover {
+  background-color: #a4a5a6;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #8a8aa2;
+} 
+/* Ensure the body takes up full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main wrapper takes full height */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes full viewport height */
+}
+
+/* The main content takes the remaining space */
+.main-content {
+  flex: 1;
+}
+
+/* Footer Styles */
+
+
+.show-footer {
+  display: block; /* Make footer visible when scrolled down */
+}
+
+/* For small screen (mobile/tablet) responsiveness */
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 15px;
+  }
+}
+/* Styling for the stock chart section */
+
+.profile-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 25px;
+  background: #f5f5f5;
+  transition: background 0.3s ease;
+}
+
+.profile-section:hover {
+  background: #e0e0e0;
+}
+
+.profile-icon {
+  font-weight: bold;
+  color: #333;
+  padding: 6px 12px;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 10px;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.profile-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 14px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid white;
+}
+
+.profile-dropdown a,
+.logout-btn {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.profile-dropdown a:hover {
+  background: #f0f0f0;
+  color: #007bff;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: #d9534f;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+  width: 100%;
+}
+
+.logout-btn:hover {
+  background: #fee;
+  color: #c9302c;
+}
+
+/* Dropdown fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Profile Section Styling */
+/* Profile Section Styling */
+.profile-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 6px 10px;
+  border: 2px solid rgb(97, 97, 97);
+  background: #0f0e1607;
+  transition: background 0.3s ease, border-color 0.3s ease;
+  width: max-content;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.profile-section:hover {
+  background: #1d1c3c;
+  border-color: #5b4caf;
+}
+
+/* Profile Icon Styling (Decreased Size) */
+.profile-icon {
+  font-weight: bold;
+  color: #f9f0f0;
+  padding: 4px 8px;
+  font-size: 14px; /* Decreased font size for profile icon */
+}
+
+/* Profile Name Styling */
+.profile-name {
+  margin-top: 4px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+}
+
+.profile-name:hover {
+  color: #4CAF50;
+}
+
+/* Profile Dropdown Styling (Increased Size) */
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #222;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 12px; /* Increased padding */
+  min-width: 160px; /* Increased width for larger dropdown */
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Dropdown Arrow */
+.profile-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 14px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid #222;
+}
+
+/* Dropdown Links Styling */
+.profile-dropdown a,
+.logout-btn {
+  display: block;
+  padding: 10px 15px; /* Increased padding for dropdown items */
+  text-decoration: none;
+  color: #ddd;
+  font-size: 14px; /* Increased font size for dropdown links */
+  border-radius: 5px;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.profile-dropdown a:hover {
+  background: #444;
+  color: #007bff;
+}
+
+/* Logout Button Styling */
+.logout-btn {
+  background: none;
+  border: none;
+  color: #d9534f;
+  cursor: pointer;
+  font-size: 14px; /* Increased font size for logout button */
+  text-align: left;
+  width: 100%;
+}
+
+.logout-btn:hover {
+  background: #555;
+  color: #c9302c;
+}
+
+/* Dropdown fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Profile Section Hover Effects to Show Dropdown */
+.profile-section:hover .profile-dropdown {
+  display: flex;
+}
+
+/* Responsive: Adjusts profile dropdown for small screens */
+@media (max-width: 768px) {
+  .profile-section {
+    padding: 5px 8px;
+  }
+
+  .profile-dropdown {
+    min-width: 150px; /* Increased width for better visibility on small screens */
+    padding: 10px; /* Increased padding */
+  }
+
+  .profile-dropdown a,
+  .logout-btn {
+    font-size: 13px;
+    padding: 8px 12px; /* Increased padding */
+  }
+}

@@ -1,0 +1,4 @@
+tradingview_ta 
+transformers
+yfinance
+requests

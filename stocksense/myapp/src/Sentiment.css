@@ -1,0 +1,223 @@
+/* General styling */
+body {
+  background-color: #141414; /* Darker background for seamless look */
+  color: #e4e4e4; /* Softer white for text */
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif; /* Matching modern font */
+  min-height: 100vh; /* Ensure the body takes at least full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Wrapper for all page content to make sure it grows and allows scrolling */
+.main-content {
+  flex: 1; /* This makes the content area grow to take up available space */
+  padding-bottom: 100px;
+  
+ 
+   /* Add some padding to ensure the footer is visible when scrolled */
+}
+
+/* Styling for the introduction text above the search bar */
+.search-intro h2 {
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: #f4f4f4; /* Softer purple for consistency */
+}
+
+/* Adjustments for the search section */
+.search-section {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Slightly smaller gap for compact design */
+  margin-bottom: 40px; /* Reduced margin for balanced spacing */
+}
+
+.search-input {
+  padding: 0.8rem 1rem;
+  width: 320px; /* Consistent input width */
+  border: 2px solid #2e2e50; /* Subtle border for minimalistic feel */
+  border-radius: 6px;
+  background-color: #1a1a2e; /* Matches dark background */
+  color: #f0f0f0;
+  font-size: 0.95rem;
+  font-family: 'Roboto', Arial, sans-serif;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: all 0.3s ease;
+}
+
+.search-bar input::placeholder {
+  color: #8a8aa2; /* Subtle placeholder color */
+}
+
+.search-input:focus {
+  border-color: #1b1e3d; /* Purple glow for focus */
+  box-shadow: 0 0 6px rgba(34, 34, 131, 0.6);
+}
+
+/* Button style for search */
+.search-button {
+  padding: 10px 22px;
+  background-color: #292d57; /* Purple theme */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.search-button:hover {
+  background-color: #191924; /* Slightly lighter purple on hover */
+  transform: scale(1.03); /* Subtle hover effect */
+}
+
+/* Results Section */
+.results-container {
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+  color: #dcdcdc; /* Consistent text color */
+}
+
+.results-header {
+  font-size: 24px;
+  color: #e4e4ff; /* Light purple header */
+  margin-bottom: 20px;
+}
+
+.results-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.result-card {
+  background-color: #20203a; /* Dark card background */
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  color: #f1f1f1;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.result-card:hover {
+  background-color: #432f8a; /* Purple highlight */
+  transform: translateY(-3px); /* Slight upward movement */
+}
+
+.result-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.result-card p {
+  font-size: 14px;
+  color: #c8c8d8; /* Softer text for descriptions */
+}
+
+/* Sentiment Results Layout */
+.sentiment-results {
+  margin-top: 30px;
+}
+
+.sentiment-results .sentiment {
+  display: inline-block;
+  background-color: #4a2f8a; /* Consistent purple */
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.sentiment-results .positive {
+  background-color: #3baf4c; /* Green for positive */
+}
+
+.sentiment-results .neutral {
+  background-color: #f4b400; /* Yellow for neutral */
+}
+
+.sentiment-results .negative {
+  background-color: #e74c3c; /* Red for negative */
+}
+
+/* Sectorial Sentiments Section */
+.sectors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.sector-card {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #232143; /* Slightly darker card background */
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.sector-card:hover {
+  background-color: #393b63; /* Slightly lighter purple on hover */
+  transform: translateY(-5px); /* More noticeable hover effect */
+}
+
+/* Global styles in App.css */
+.app-header {
+  background-color: #5a389b; /* Purple header background */
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.app-header h1 {
+  font-size: 36px; /* Smaller header font for consistency */
+}
+
+.app-header p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Sentiment Page Container */
+.sentiment-container {
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #1a1a2e;
+  color: #e4e4e4;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #8a8aa2;
+}

@@ -1,0 +1,163 @@
+/* General Styles for the Compare Component */
+.compare {
+  text-align: center;
+  padding: 3rem;
+  color: #ffffff;
+  margin: 3rem auto;
+  width: 80%;
+  max-width: 700px;
+  background-color: #cccccc00; /* Slightly darker background for the entire component */
+  border-radius: 15px; /* Rounded corners for a smoother look */
+}
+
+/* Header */
+.compare h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem; /* Slightly larger header for better visibility */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #c8c8c8;
+}
+
+/* Inputs Container */
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem; /* Increased gap for better spacing */
+  margin-bottom: 2.5rem;
+}
+
+/* Input Fields */
+.inputs input {
+  padding: 1rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid #444;
+  background-color: #282a36;
+  color: #e0e0e0;
+  font-size: 1rem;
+  font-family: 'Poppins', Arial, sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* Focus Effect */
+.inputs input:focus {
+  border-color: #b9a4ff; /* Purple on focus */
+  box-shadow: 0 0 10px rgba(185, 164, 255, 0.5); /* Glowing effect */
+  outline: none;
+  transform: scale(1.02);
+}
+
+/* Compare Button */
+.compare-button {
+  padding: 1rem 2.5rem;
+  background-color: #1e1f30;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  margin-top: 1rem;
+  width: 100%; /* Full-width for smaller screens */
+}
+
+.compare-button:hover {
+  background-color: #4e4561; /* Lighter hover color */
+  box-shadow: 0 8px 15px rgba(33, 21, 61, 0.3);
+}
+
+.compare-button:active {
+  transform: scale(0.96);
+  background-color: #322346;
+}
+
+/* Comparison Results Container */
+.comparison-results {
+  margin-top: 3rem;
+  background: #161625;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  color: #d1d1d1;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.8;
+  width: 100%; /* Changed from 200% to 100% */
+  max-width: 1200px; /* Limiting max-width for readability */
+  margin: 2rem auto;
+  text-align: left;
+}
+
+/* Section Header Styling */
+.comparison-results h2 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #e5e5e5;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Paragraphs in Results */
+.comparison-results p {
+  margin-bottom: 1rem;
+  color: #cfcfcf;
+}
+
+/* Highlight Key Information */
+.comparison-results strong {
+  font-weight: 700;
+  color: #b9a4ff;
+}
+
+/* Preformatted Content (e.g., Code Blocks or Pre Tags) */
+.comparison-results pre {
+  background: #1e1e2e;
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: #d1d1d1;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .compare {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .compare h1 {
+    font-size: 2.2rem;
+  }
+
+  .inputs input {
+    width: 100%;
+    padding: 0.8rem;
+  }
+
+  .compare-button {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .comparison-results {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1rem;
+  }
+
+  .comparison-results h2 {
+    font-size: 1.5rem;
+  }
+
+  .comparison-results pre {
+    font-size: 0.9rem;
+  }
+}

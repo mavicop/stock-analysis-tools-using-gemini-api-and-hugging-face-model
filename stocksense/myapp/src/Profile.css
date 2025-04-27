@@ -1,0 +1,120 @@
+/* Profile container styling */
+.profile-container {
+    max-width: 450px; /* Slightly wider for better layout */
+    margin: 50px auto;
+    padding: 30px;
+    background: #1f1f1f; /* Dark background for profile */
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Darker shadow for depth */
+    text-align: center;
+    transition: all 0.3s ease;
+    font-family: Arial, sans-serif;
+    color: #ddd; /* Light text color for dark theme */
+  }
+  
+  /* Heading Styling */
+  .profile-container h2 {
+    margin-bottom: 30px;
+    font-size: 28px; /* Slightly larger font size */
+    color: #fff; /* White text for heading */
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  /* Label Styling */
+  .profile-container label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #bbb; /* Light grey color for labels */
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  /* Input Field Styling for Name */
+  .profile-container input[type="text"],
+  .profile-container textarea {
+    padding: 12px 15px;
+    border: 1px solid #444; /* Darker border for inputs */
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #333; /* Dark background for inputs */
+    color: #ddd; /* Light text color in inputs */
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Textarea Styling */
+  .profile-container textarea {
+    resize: none;
+    min-height: 120px; /* Ensure adequate height for description */
+  }
+  
+  /* Button Styling */
+  .profile-container button {
+    padding: 12px 24px;
+    background-color: #1d2039; /* Green button for save */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .profile-container button:hover {
+    background-color: #242438; /* Slightly darker green on hover */
+  }
+  
+  /* Focused Input and Textarea Styling */
+  .profile-container input[type="text"]:focus,
+  .profile-container textarea:focus {
+    outline: none;
+    border-color: #1f1f38; /* Green border on focus */
+    background-color: #444; /* Darker background on focus */
+  }
+  
+  /* Input Placeholder Styling */
+  .profile-container input::placeholder,
+  .profile-container textarea::placeholder {
+    color: #9a9090; /* Light gray color for placeholders */
+  }
+  
+  /* Error message styling */
+  .error-text {
+    color: #ff3d3d;
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 10px;
+    display: none; /* Hidden by default, shown when needed */
+  }
+  
+  /* Spacing Adjustments */
+  .profile-container .input-field {
+    margin-bottom: 25px;
+  }
+  
+  /* Responsive: Ensure the layout looks good on smaller screens */
+  @media (max-width: 600px) {
+    .profile-container {
+      padding: 20px;
+    }
+  
+    .profile-container h2 {
+      font-size: 24px;
+    }
+  
+    .profile-container input[type="text"],
+    .profile-container textarea,
+    .profile-container button {
+      font-size: 14px;
+    }
+  }
+  

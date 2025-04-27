@@ -1,0 +1,107 @@
+/* Container for the contact form */
+.support-container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #2a2b3c; /* Darker background for a consistent theme */
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Slightly darker shadow */
+}
+
+/* Heading of the contact form */
+.support-title {
+  font-size: 24px;
+  color: #e4e4e4; /* Lighter text color for better readability */
+  margin-bottom: 12px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+}
+
+/* Form styling */
+.support-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels for the inputs and textareas */
+.support-form label {
+  color: #e4e4e4; /* Lighter label text */
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Input and textarea field styling */
+.support-form input,
+.support-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background-color: #1c1b2f; /* Darker input field for consistency */
+  color: #f1f1f1; /* Light text on dark background */
+}
+
+/* Resize settings for textarea */
+.support-form textarea {
+  resize: none;
+  min-height: 120px; /* Increased height for better experience */
+  width: 100%;
+}
+
+/* Focus effects for inputs and textareas */
+.support-form input:focus,
+.support-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px #33415b; /* Subtle purple focus glow */
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Submit button styling */
+.support-form button[type="submit"] {
+  background-color: #1f244b; /* Purple button to match the theme */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%; /* Make button span the width of the form */
+}
+
+/* Button hover effect */
+.support-form button[type="submit"]:hover {
+  transform: scale(1.1); /* Button grows on hover */
+  background-color: #20283b; /* Slightly darker on hover */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Feedback message styles */
+.support-message-container,
+.support-success-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #2a2b3c; /* Darker background for message boxes */
+  border-radius: 12px;
+  border: 1px solid #444;
+  text-align: center;
+  color: #f1f1f1; /* Light color for message text */
+  font-size: 16px;
+}
+
+/* Success message container */
+.support-success-container {
+  background-color: #2ecc71; /* Green color for success */
+  border-color: #27ae60;
+  color: #fff; /* White text for better readability */
+}
+
+/* Error message container */
+.support-message-container {
+  background-color: #e74c3c; /* Red color for errors */
+  border-color: #c0392b;
+  color: #fff; /* White text on red background */
+}

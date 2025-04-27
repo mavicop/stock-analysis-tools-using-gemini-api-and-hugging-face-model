@@ -1,0 +1,201 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #221d4ffd; /* Dark background to contrast with content */
+  color: #e0e0e0; /* Light gray text for readability */
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for news and input section */
+.news-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1f1f1f00; /* Slight dark background to make content pop */
+  border-radius: 15px; /* Rounded corners */
+}
+
+/* Heading Styles */
+.news-container h1 {
+  text-align: center;
+  font-size: 3rem; /* Larger heading */
+  color: #f8f8f8; /* Purple for emphasis */
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+/* Stock news section */
+.stock-news {
+  margin-bottom: 40px;
+}
+
+/* Subheading Styles for each stock category */
+.stock-news h2 {
+  font-size: 2rem;
+  color: #d1d1d1; /* Soft gray for subheadings */
+  margin-bottom: 20px;
+  border-bottom: 2px solid #444; /* Darker line for subtle emphasis */
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
+/* News Item Card */
+.news-item {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s ease;
+}
+
+.news-item:hover {
+  transform: scale(1.03); /* Slight zoom on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly darker background on hover */
+}
+
+/* News Title */
+.news-title {
+  font-size: 1.4rem;
+  color: #dddddd; /* Purple for titles */
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.news-title:hover {
+  text-decoration: underline;
+  color: #3f79cb; /* Darker purple on hover */
+}
+
+/* News Item Details (source and date) */
+.news-details {
+  font-size: 0.95rem;
+  color: #b3b3b3; /* Soft gray for details */
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* News Description */
+.news-description {
+  font-size: 1rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Error Message */
+.error-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #dc3545; /* Red for error messages */
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Source and Date styling */
+.news-source {
+  font-style: italic;
+  color: #9e9e9e; /* Lighter gray for source */
+}
+
+.news-date {
+  color: #a8a8a8; /* Lighter gray for date */
+}
+
+/* Input form for stock symbol search */
+.stock-input-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+/* Stock Symbol Input */
+.stock-input {
+  padding: 12px;
+  font-size: 1rem;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  background-color: #333; /* Dark background for input */
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Input Focus Effect */
+.stock-input:focus {
+  outline: none;
+  border-color: #5a8cff; /* Purple border on focus */
+  box-shadow: 0 0 8px rgba(127, 90, 255, 0.5); /* Glowing focus effect */
+}
+
+/* Submit Button */
+.stock-submit {
+  padding: 12px 20px;
+  background-color: #1e2c55; /* Soft purple */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover Effect */
+.stock-submit:hover {
+  background-color: #3d4a7f; /* Darker purple on hover */
+  transform: scale(1.05);
+}
+
+/* Invalid stock input styles */
+.stock-input.invalid-input {
+  border-color: #dc3545; /* Red border for invalid input */
+}
+
+/* Additional spacing between input and submit button */
+.stock-input-form input,
+.stock-input-form button {
+  margin: 0 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .news-container {
+    padding: 15px;
+  }
+
+  /* Adjust headings for mobile */
+  .news-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .stock-news h2 {
+    font-size: 1.8rem;
+  }
+
+  .news-item {
+    padding: 10px;
+  }
+
+  .stock-input-form {
+    flex-direction: column;
+  }
+
+  .stock-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .stock-submit {
+    width: 100%;
+  }
+}
