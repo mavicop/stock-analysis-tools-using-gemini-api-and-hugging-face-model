@@ -1,0 +1,10 @@
+Flask
+Flask-Cors
+yfinance
+tradingview_ta
+google-generativeai
+transformers
+requests
+# You might need one of the following depending on your FinBERT implementation:
+# torch
+# tensorflow
