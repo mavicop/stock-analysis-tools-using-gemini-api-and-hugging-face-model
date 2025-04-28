@@ -1,8 +1,6 @@
 # Stock Analysis AI Tool
 
 [![GitHub license](https://img.shields.io/github/license/mavicop/stock-analysis-tools-using-gemini-api-and-hugging-face-model)](https://github.com/mavicop/stock-analysis-tools-using-gemini-api-and-hugging-face-model/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/mavicop/stock-analysis-tools-using-gemini-api-and-hugging-face-model)](https://github.com/mavicop/stock-analysis-tools-using-gemini-api-and-hugging-face-model/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/mavicop/stock-analysis-tools-using-gemini-api-and-hugging-face-model)](https://github.com/mavicop/stock-analysis-tools-using-gemini-api-and-hugging-face-model/network/members)
 ## Description
 
 This is a web-based Stock Analysis AI Tool designed to provide users with fundamental and technical analysis, sentiment analysis, and comparative analysis of stocks. Leveraging the power of AI, specifically the Gemini API, along with various financial data sources and a sentiment analysis model, the tool offers insights to aid in stock research. The application features a Python backend and a React frontend, providing a user-friendly interface.
